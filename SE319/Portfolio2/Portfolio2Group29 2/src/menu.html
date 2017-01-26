@@ -1,0 +1,49 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+
+            <ion-nav-buttons side="right">
+                <a href = "#/menu/home" class="button button-icon button-clear ion-home"></a>
+            </ion-nav-buttons>
+
+        </ion-nav-bar>
+
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" class="side-menu" slide-along offset="-15">
+        <ion-header-bar class="bar-royal">
+            <h1 class="title">Navigation</h1>
+        </ion-header-bar>
+        <ion-content>
+            <ul class="list">
+                <a ng-click = "vm.goToCities()" class="item" menu-close>View Cities</a>
+                <a href="#/menu/post" class="item" menu-close>Post</a>
+                <a ng-click = "vm.logOut()" class="item" menu-close>LogOut</a>
+            </ul>
+        </ion-content>
+    </ion-side-menu>
+
+
+    <!--THIS IS A RIGHT SIDE MENU -->
+
+    <!--<ion-side-menu side="right" class="side-menu" slide-along offset="-15">-->
+        <!--<ion-header-bar class="bar-royal">-->
+            <!--<h1 class="title">Right Menu</h1>-->
+        <!--</ion-header-bar>-->
+        <!--<ion-content>-->
+            <!--<ul class="list">-->
+                <!--<a href="#/menu/viewCities" class="item" menu-close>View Cities</a>-->
+                <!--<a href="#/menu/post" class="item" menu-close>Post</a>-->
+            <!--</ul>-->
+        <!--</ion-content>-->
+    <!--</ion-side-menu>-->
+
+</ion-side-menus>

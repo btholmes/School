@@ -1,0 +1,19 @@
+WEDNESDAY AUGUST 24: 
+	Downloaded the files, and all necessary software. Ran program for first time, learned how to play the mpg. 
+THURSDAY AUGUST 25: 
+	Made changes to langton327.c file, in an attempt to implement Langton's ant. Failed to implement correctly, but I discovered that buffer[i][i] was responsible for rewriting the grid spaces. I changed i to 64, and this showed me how to start the ant in the center of the grid. I am now ready to implement the rules. 
+FRIDAY AUGUST 26: 
+	Completed the assignment. Implemented set of directions using the following 
+	1: North
+	2: South
+	3: West
+	4: East
+I then changed the provided for(i = 0; i < 128; i++) into a while loop with the parameters to watch while i and j are in the range of 0 to 128 inclusive. 
+Next I added the if statements. First if checks to see the color of the grid space, if it is white, turn 90 degrees clockwise, and change direction. Then changethe color of the grid space to black. If it is black, turn 90 counterclockwise, change color to white. 
+
+At the end of the initial if statements, I have a series of final statements which check which direction the ant is currently facing. Depending on the direction, the ant moves one space forward, either north south west or east, then calls the next_frame((char*)buffer) function, and continues through the loop. 
+
+At the end of the while loop finish_encode() is called. 
+
+MONDAY AUGUST 29: 
+	Created CHANGELOG, README, and Make file, turned in the assignment. 

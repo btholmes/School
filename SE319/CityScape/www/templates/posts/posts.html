@@ -1,0 +1,26 @@
+<ion-view class = "post_page" view-title="Posts Menu">
+    <ion-content class="padding">
+        <div class="logo">
+            <h1>Make A Post</h1>
+        </div>
+        <div class="post">
+            <form method="post">
+                <label style = "padding: 0px 0 5px 0px !important;" class="item item-input no-background input-line">
+                     <input type="text" class = "textInput" ng-model = "vm.cityState" placeholder="  Ames, IA" required="required" />
+                </label>
+                <br>
+                <label style = "padding: 0px 0 5px 0px !important;" class="item item-input no-background input-line">
+                    <textarea class = "textarea textInput" type = "text" ng-model = "vm.description" placeholder="Description"></textarea>
+                </label>
+                <br>
+                <button class="file-upload"><input type="file" fileread="vm.uploadMe" class="file-input">Choose Image</button>
+
+                <img class = "uploaded_image" src="{{vm.uploadMe}}" >
+
+                <button type="submit" ng-click="vm.post()" class="imageButton button button-positive button-block">Post</button>
+            </form>
+        </div>
+
+
+    </ion-content>
+</ion-view>

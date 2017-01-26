@@ -1,0 +1,42 @@
+<div class="container-fluid">
+	<p class="text-center text-danger">Click a date to load your calendar</p>
+
+	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 saveDate">
+			<br />
+			<h1 class="todoHeads text-blue">Schedule</h1>
+			<h4 class="text-gray">{{vm.daySchedule}}</h4>
+
+		<div class="todoDiv">
+
+			<ul class="todoUl">
+				<li class="danger text-white ">{{vm.theseTasks}} Tasks Today</li>
+				<li class="text-danger" data-ng-if="errorMsg">{{errorMsg}}</li>
+				<li data-ng-repeat="task in vm.tasks | dayFilter:this track by $index">
+					<input ng-if="false" type="checkbox" data-ng-model="task.status"> {{task.name}} 
+					<span class="todoSpan glyphicon glyphicon-remove" ng-click="vm.removeTask($index)"></span>
+				</li>
+			</ul>
+			<form class = "form-inline">
+				<div class = "form-group form-group-lg form-group-md form-group-sm form-group-xs">
+					<div class = "col-lg-2 col-md-2 col-s-2 col-xs-2 ml-5 width20">			
+						<input class="form-control pull-left" type="text" ng-model="vm.pushTask"
+							placeholder="Enter Task" />
+					</div>			
+					<div class = "col-xs-1 float-right mr-5">	
+						<button class="btn btn-lg btn-primary pull-right" data-ng-click="vm.addTask()">Add</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+<!-- 		<!-- ng-keyup="$event.keyCode == 13 && myFunc()" --> 
+
+	</div>
+	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 device">
+		<div class="screen">
+			<div class="content">
+				<div wn-calendar></div>
+			</div>
+		</div>
+	</div>
+</div>

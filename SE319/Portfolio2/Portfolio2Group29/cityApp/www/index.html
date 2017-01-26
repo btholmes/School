@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+    <title>CityScape</title>
+
+    <link rel='shortcut icon' href='cityScape.ico' type='image/x-icon'/ >
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+    <!--LOAD ANGULAR AND UI ROUTER-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+    <!--ALL CONTROLLERS AND SERVICES-->
+    <script src="app.js"></script>
+    <!--<script src = "menuCtrl.js.js"></script>-->
+    <script src = "constants/constants.js"></script>
+    <script src = "loadFactory/ionicLoadbar.js"></script>
+    <script src = "posts/directives/postDirective.js"></script>
+    <script src = "login/controllers/loginCtrl.js"></script>
+    <script src = "login/controllers/signUpCtrl.js"></script>
+    <script src = "login/services/loginService.js"></script>
+    <script src = "login/services/signUpService.js"></script>
+    <script src = "home/controllers/homeCtrl.js"></script>
+    <script src = "home/services/logOutService.js"></script>
+    <script src = "cities/controllers/citiesCtrl.js"></script>
+    <script src = "cities/services/getImagesService.js"></script>
+    <script src = "posts/controllers/postCtrl.js"></script>
+    <script src = "posts/services/imageService.js"></script>
+
+
+    <!--IONIC STUFF -->
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <!--END IONIC STUFF -->
+</head>
+<body>
+
+<ion-nav-view></ion-nav-view>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+<div class = "signup">
+        <h1 class="text-primary text-center">Login Page</h1>
+        <br>
+        <div class = "form-group">
+            UserName:
+            <input type="text" id = "userName" class = "form-control">
+        </div>
+        <br>
+        <div class = "form-group">
+            Password:
+            <input type = "password" id = "pass" class = "form-control">
+        </div>
+        <br>
+        <button onclick = "checkLogin()" class = "submitBtn btn btn-primary float-right">Login</button>
+        <button onclick = "goToSignUp()" class = "signUpBtn btn btn-info float-right">SignUp</button>
+</div>
+
+</body>
+<script>
+
+    function goToSignUp(){
+        window.location.href = "signup.html";
+    }
+
+    function checkLogin(){
+
+        var userNameV = $("#userName").val();
+        var passV = $("#pass").val();
+        var correct = 0;
+
+        $.ajax({
+            type: 'POST',
+            url: "checkLogin.php",
+            data: {
+                userName: userNameV,
+                pass: passV
+            },
+            success: function (data) {
+                if(data == "Successful Login"){
+                    localStorage.setItem("user", userNameV);
+                    window.location.href = "studentView.php";
+
+                }
+                else if(data == "Successful Login Librarian"){
+                    localStorage.setItem("user", userNameV);
+                    window.location.href = "librarian.php";
+
+                }
+                else{
+                    alert("incorrect user or pass");
+                }
+
+            }
+        });
+
+    }
+
+
+</script>
+
+</html>
+
+

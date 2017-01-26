@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+    <title>Lab 7 Team 29</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+    <!--LOAD ANGULAR AND UI ROUTER-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+
+    <!--ALL CONTROLLERS AND SERVICES-->
+    <script src="app.js"></script>
+    <script src = "tableDirective.js"></script>
+    <script src="loginCtrl.js"></script>
+    <script src="library.js"></script>
+
+</head>
+<body>
+
+<div ui-view></div>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+commit 0e0a8abd6b8cf08199e67f56117f601d065dc43e
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Sun Sep 25 00:00:15 2016 -0500
+
+    I finished assignment 1.03, and am working towards 1.04
+
+commit 6aaee04d3a7148f60bd1536b625e5bf3ae04df11
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 21 14:31:10 2016 -0500
+
+    I fixed the errors I was getting with the non tunneling distance display, but I still have an error with displaying the Player Character position.
+
+commit ca769f7a6af301133135efeffa6bb69a53573c21
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Sun Sep 18 18:44:36 2016 -0500
+
+    I finished most of Assignment 3 for 327. I still have all the tunneling distances displaying, and started creating the methods to display the non tunneling monsters. Right now my program is grabbing all rock, displaying a 0, grabbing the PC, displaying 0, and grabbing all rooms or corridors and displaying a Z. Just need to update the rooms and corridors to display the correct distances.
+
+commit 000612a25f65e13837c708a1f07577de8d380732
+Merge: c7e6399 f660c55
+Author: Ben <btholmes@iastate.edu>
+Date:   Sun Sep 18 18:41:20 2016 -0500
+
+I created functions for handling Tunneling distance. I also found a priority queue, and implemented it. I created a priority object which stores distances, and a function to find neighbors of each item on the priority queue. 

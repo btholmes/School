@@ -1,0 +1,111 @@
+<div class = "car"><h2 class = "text-info">Use Arrows to Navigate</h2></div>
+
+<canvas id="canvas" style="background:#eeeeee">
+  
+</canvas>
+
+
+<script>
+
+(function(canv, width, height, speed, strength)
+	     {
+	        var canvas = document.querySelector(canv),
+	                ctx = canvas.getContext("2d"),
+	                pos = 0, 
+	                blocks = [];
+	                canvas.width = width; 
+	                canvas.height = height;
+	                ctx.fillStyle = "black";
+	      
+	           var topBound = 0,
+	                bottomBound = height, 
+	                leftBound = 0, 
+	                rightBound = width, 
+	               heightPosition = height - 50; 
+	      
+	      // blocks.push([0,0],[0,10]);
+	      
+	        var game = setInterval(function()
+	        {
+	            if( Math.random() < strength) 
+	              blocks.push([Math.random()*(width-10),-10]);
+	            
+	             ctx.clearRect(0,0,width,height);
+	                  ctx.fillRect(pos,heightPosition,10,40);
+	 
+	            for(var i = 0; i < blocks.length; i++)
+	            {
+	                ctx.fillRect(blocks[i][0],blocks[i][1],10,10);
+	                if( blocks[i][1] <= heightPosition +40 && blocks[i][1] >= heightPosition - 10
+	                   && Math.abs( pos - blocks[i][0]) <=10 )
+	                {
+	                    clearInterval(game);
+	                    if(window.location.href.indexOf("game") != -1)
+	                    	alert("Game over. You have" + " " + Math.floor(1000 * strength) + " points.");
+	                }
+	                if( blocks[i][1] > height - 5 )
+	                {
+	                    blocks.splice( i, 1);
+	                    i--;
+	                 }
+	                 else 
+	                 {
+	                     blocks[i][1] += 5;
+	                 }
+	            }
+	            strength += 0.001;
+//	         end of game block  
+	        },
+	        90 );
+	        
+	document.addEventListener('keydown', function(e) 
+	{
+		  if (e.keyCode === 37) 
+	    {
+	        if(pos >  leftBound)
+	        {
+	        ctx.clearRect(pos,heightPosition,width,height);
+	        pos -= 10; 
+	        ctx.fillRect(pos,heightPosition,10,40);
+	        }
+	      
+	     } 
+	  else if (e.keyCode === 39) 
+	  {
+	        if(pos + 10 < rightBound)
+	        {
+		      ctx.clearRect(pos,heightPosition,width,height);
+	        pos += 10; 
+	        ctx.fillRect(pos,heightPosition,10,40);
+	        }
+		  
+	  }
+	     else if (e.keyCode === 38) 
+	    {
+		     
+	        if(heightPosition > topBound) 
+	        { 
+	          ctx.clearRect(pos,heightPosition,width,height);
+	          heightPosition -= 10; 
+	          ctx.fillRect(pos,heightPosition,10,40);
+	        }
+		  } 
+	    else if (e.keyCode === 40) 
+	    {
+		    if(heightPosition + 40 < bottomBound) 
+	        { 
+	          ctx.clearRect(pos,heightPosition,width,height);
+	          heightPosition += 10; 
+	          ctx.fillRect(pos,heightPosition,10,40);
+	        }
+		  }
+	},
+	false);
+	      
+	})
+	 ("#canvas",500,300,33,0.05);
+
+
+
+
+</script>

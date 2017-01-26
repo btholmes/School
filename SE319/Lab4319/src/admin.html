@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin View</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel = "stylesheet" href ="style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src = "booksLibrary.js"></script>
+
+</head>
+<body onload = "init()">
+<h1 class = "text-center text-warning">Librarian View</h1>
+<br>
+<h4 id = "userWelcome" class = "text-info"></h4>
+<div class = "row">
+    <div class = "col-md-7 col-md-offset-5">
+        <h5 class = "note text-danger">Note: the id represents the shelf, Art == 0, Science == 1, Sports == 2, Literature == 3</h5>
+    </div>
+</div>
+<br>
+<div class = "addBook row">
+    <br>
+    <div class="bookName form-group col-md-5">
+        <b>Book Name:</b> <p id = "errorBook" class = "hidden">Please enter a book name</p>
+        <input type="text" class="form-control" id="bookName">
+    </div>
+    <div class="bookID form-group col-md-5">
+        <b>ID:   </b> <p id = "errorID" class = "hidden">Please type a number between 0 and 3 inclusive</p>
+        <input type="text" class="form-control" id="bookID">
+    </div>
+    <div class = "col-md-1 addBookBtn">
+        <button type = "button" class = "btn btn-warning" onclick = "addBook()">Add Book</button>
+    </div>
+    <div class = "col-md-1"></div>
+</div>
+
+<br>
+<br>
+
+
+</body>
+</html>

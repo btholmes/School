@@ -1,0 +1,7 @@
+export PATH=${PATH}:/Users/btholmes/Library/Android/sdk/platform-tools:/Users/btholmes/Library/Android/sdk/tools
+
+
+IN PHONE
+TURN ON DEVELOPER MODE
+About Phone-Tap build number 7 times
+Settings-Developer Options-Enable USB Debugging

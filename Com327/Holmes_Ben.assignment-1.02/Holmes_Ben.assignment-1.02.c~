@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+char* appendRLG(char* str1, char* str2){
+
+  char* HOME  = malloc(sizeof(char) * strlen(str1) + sizeof(char) * strlen(str2)); 
+
+  strcat(HOME, str1);
+  strcat(HOME, str2);
+  
+  return HOME; 
+}
+
+int main(int argc, char* argv[]){
+
+  char* environment = getenv("HOME");
+  char* rlg = "/rlg327";
+
+  //NOW HOME STRING HAS RLG327 APPENDED TO IT
+  char* HOME = appendRLG(environment, rlg);
+
+  printf("%s \n", HOME);
+  
+}

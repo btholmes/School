@@ -1,0 +1,53 @@
+commit e4a821d806573f01035dd16d865db301f759e1f1
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 7 13:16:56 2016 -0500
+
+    I created the tar file, and updated the make to include the clean
+
+commit e2c3f39ec6ba2c7d11ecc5b2c6051f6443d2d072
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 7 12:59:23 2016 -0500
+
+    I created the make file, enabled it with ggdb debugger
+
+commit 6d550a048df12ff09da696ff1087bab8ced4442b
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 7 12:56:03 2016 -0500
+
+    I finished the Changelog, erased the grid.c file, and changed it's name to Holmes_Assignment1_01
+
+commit cc7c287039f24b9ea636d82267830529a21808c4
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Mon Sep 5 22:03:40 2016 -0500
+
+
+commit cc7c287039f24b9ea636d82267830529a21808c4
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Mon Sep 5 22:03:40 2016 -0500
+
+    I made small change. Instead of only connecting rooms 1 with 2, 2 with 3.. etc. Now I am also connecting rooms with their closest neighbors, which will guarantee multiple ways to get to each room. I also created the README.
+
+commit edb6664539d7cdb781c53421881d91ec1672a3ef
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Mon Sep 5 21:33:02 2016 -0500
+
+    I commented out some lines in Main, just so I could guarantee the correct functionality. I'm no longer calculating shortest distances from room to room, instead I'm just connecting room 1 to 2 and 2 to 3 etc..
+
+commit e7faa6204666319bbd1e8d2d45cd7dde73816fed
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Mon Sep 5 19:26:34 2016 -0500
+
+    I managed to get most of the functionality, rooms are connecting, but still some errors
+
+commit 260c77d2a6c8654ee6193ee1f06778a7b5bdbb1f
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Sun Sep 4 19:49:25 2016 -0500
+
+    I started over, named the file grid.c. Spent all day working, finally got the basic rooms to be created, started functions to find the distance from one room to the next, and am currently working on connecting the rooms :wq
+
+commit 2d9221fa94d9ff2f835d06325c14b94cfea5207e
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Tue Aug 30 15:10:45 2016 -0500
+
+    Updating school for first part of 2nd assignment
+

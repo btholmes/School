@@ -1,0 +1,17 @@
+<div id="month"><p class = "years">{{vm.calYear}}</p><span ng-click = "previousMonth()" class = "left glyphicon glyphicon-chevron-left"> </span>{{currentMonth}}<span ng-click = "nextMonth()" class = "right glyphicon glyphicon-chevron-right"> </span></div>
+  <hr>    
+      <div id="days">
+        <ul>
+          <li ng-repeat="label in dayLabels">{{label}}</li>
+        </ul>
+        <ul> 
+          <li ng-repeat="prevMonthDay in prevMonthDays"> 
+            <span class="date disabled">{{prevMonthDay}}</span>
+          </li>
+          <li ng-repeat="day in days" ng-click="vm.setEvent(day)">
+              <span id = {{day}} info = {{day}}{{currentMonth}}{{vm.calYear}}  class="date" ng-class="getClass(day)">{{day}}</span></li>
+          <li ng-repeat="nextMonthDay in nextMonthDays">
+            <span class="date disabled">{{nextMonthDay}}</span>
+          </li>
+        </ul>
+</div>

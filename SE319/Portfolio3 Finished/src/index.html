@@ -1,0 +1,107 @@
+<html>
+<meta charset="UTF-8">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="main.webapp.app.assets.css/style.css">
+</head>
+
+<body ng-app="myApp"  ng-controller="mainCtrl" >
+
+	
+	<nav class="navbar navbar-default bottomNavBorder mainNavbar" role="navigation"> 
+		<div class="container"> 
+			<div class="navbar-header"> 
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>					
+				</button> 	
+				<a ng-click = "show = home" ui-sref="home" class="text-blue navbar-brand myName">Person's Name</a>
+			</div>
+			 	<div class="navbar-collapse collapse"> 
+			 		<ul class="nav navbar-nav navbar-right navNames"> 
+<!-- 			 			<li><a ng-click = "show = home" class="navHeader" ui-sref="home">Home Page</a></li> -->
+			 			<li><a ng-click = "show = null" ui-sref="about">About</a></li>
+			 			<li ng-click = "changeShow()"><a ui-sref="portfolio">Portfolio</a></li>
+			 			<li><a ng-click = "show = 0" ui-sref="blog">Resumé</a></li>
+			 		</ul>
+			 	</div>
+		</div>
+	</nav>
+
+
+	<div class="container-fluid mt5">
+		<div ui-view></div>
+	</div>
+
+
+
+
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script
+		src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+		crossorigin="anonymous"></script>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	
+	<script
+		src="https://code.angularjs.org/1.4.7/angular-animate.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+	<script
+		src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd1xMYT1bt99qtFWQEzXiRBvORDWHgPtk&libraries=places"></script>
+
+
+	
+	<script src="app.js"></script>
+	<script src="mainCtrl.js"></script>
+	<script src="main.webapp.app.common.constants/constants.js"></script>
+	<script src="main.webapp.app.filters/filters.js"></script>
+	<script src="main.webapp.app.home/controllers/myCtrl.js"></script>
+	<script src="main.webapp.app.about/controllers/aboutCtrl.js"></script>
+	<script src="main.webapp.app.contact/controllers/contactsCtrl.js"></script>
+	<script src="main.webapp.app.portfolio/controllers/portfolioCtrl.js"></script>		
+	<script src="main.webapp.app.calendar/directives/scheduleDirective.js"></script>
+	<script src="main.webapp.app.calendar/controllers/scheduleCtrl.js"></script>
+	<script src="main.webapp.app.calendar/controllers/myTodoList.js"></script>
+
+	
+	
+	<script src="main.webapp.app.googleMap/controllers/mapCtrl.js"></script>
+	<script src="main.webapp.app.googleMap/factories/mapService.js"></script>
+	<script src="main.webapp.app.googleMap/directives/mapDirectiveMark.js"></script>
+	<script src="main.webapp.app.googleMap/directives/MapDirectiveUnMark.js"></script>
+
+	
+
+</body>
+<footer>
+	<h1 class = "textTitle text-center text-gray pr4 mt2 navHeader">Keep in Touch!</h1>
+		<div class = "row mt2"> 
+		<div class = "col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-4 col-sm-2 col-sm-offset-4 col-xs-2 col-xs-offset-4">
+				<a href = "https://www.linkedin.com/in/matt-damon-a005b567?authType=name&authToken=1WBj">
+				<img class = "aboutImage" src = "images/linkedIn.png">
+				</a>
+		</div>
+		<div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<a href = "https://github.com/">
+				<img class = "aboutImage" src = "images/gitHub.png">
+				</a>
+		</div>
+	</div>
+</footer>
+
+</html>

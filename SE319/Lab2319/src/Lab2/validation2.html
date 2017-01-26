@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact Info</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "/Users/btholmes/Documents/workspace/Lab2319/src/Lab2/validation2.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style>
+	.ml{
+		margin-left:  10px; 
+	}
+	.show {
+	display: inline; 
+	float: right; 
+	}
+	.rightEmail{
+		display: none;
+	}
+	.wrongEmail{
+		display: none;
+	}
+	.rightPhone{
+		display: none;
+	}
+	.wrongPhone{
+		display: none;
+	}
+	.rightAddress{
+		display: none;
+	}
+	.wrongAddress{
+		display: none; 
+	}
+	img{
+	width: 2em; 
+	height: 2em; 
+	}
+</style>
+
+</head>
+<body>
+<h1 class = "text-primary">Contact Information</h1>
+<br>
+<div class = "ml row">
+	<div class = "col-md-3">
+		Email: 
+		<input type = "textfield" id = "email" placeholder = "xxx@xxx.xxx" required>
+		<img class = "rightEmail" src = "/Users/btholmes/Documents/workspace/Lab2319/src/correct.png">
+		<img class = "wrongEmail" src = "/Users/btholmes/Documents/workspace/Lab2319/src/wrong.png">
+	</div>
+	<div class = "col-md-9"></div>
+</div>
+<br>
+<div class = "ml row">
+	<div class = "col-md-3">
+		Phone: 
+		<input type = "textfield" id = "phone" placeholder = "xxx-xxx-xxxx">
+		<img class = "rightPhone" src = "/Users/btholmes/Documents/workspace/Lab2319/src/correct.png">
+		<img class = "wrongPhone" src = "/Users/btholmes/Documents/workspace/Lab2319/src/wrong.png">
+	</div>
+	<div class = "col-md-9"></div>
+</div>
+<br>
+<div class = "ml row">
+	<div class = "col-md-3">
+		Address: 
+		<input type = "textfield" id = "address" placeholder = "Ames, IA" required>
+		<img class = "rightAddress" src = "/Users/btholmes/Documents/workspace/Lab2319/src/correct.png">
+		<img class = "wrongAddress" src = "/Users/btholmes/Documents/workspace/Lab2319/src/wrong.png">
+	</div>
+	<div class = "col-md-9"></div>
+</div>
+<br>
+<div class = "ml row">
+	<button onclick = "validate()"class = "btn btn-primary">Submit</button>
+</div>
+</body>
+</html>

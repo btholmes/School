@@ -1,0 +1,54 @@
+<div class = "jumbotron">
+<h1>Contact Page</h1>
+</div>
+
+<div class = "container-fluid">
+
+<div class="col-sm-8 col-sm-offset-2">
+    
+    <!-- PAGE HEADER -->
+    <div class="page-header"><h1 class = "text-white">Leave a Message</h1></div>
+   
+    <!-- FORM -->
+    <!-- pass in the variable if our form is valid or invalid -->
+    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+
+        <!-- NAME -->
+        <div class="form-group" ng-class="{ 'has-error has-feedback' : submitted && userForm.name.$invalid}">
+            <label class="control-label text-info">Name</label>
+            <input type="text" name="name" id="uName" class="form-control" ng-model="name" required >
+          <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="submitted && userForm.name.$invalid "></span>
+            <p ng-show="submitted && userForm.name.$invalid" class="help-block">You name is required.</p>
+        </div>
+
+        <!-- USERNAME -->
+        <div class="form-group" ng-class="{ 'has-error has-feedback' : submitted && userForm.username.$invalid }" id="usrName">
+            <label class="control-label text-info">Username</label>
+            <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8" id="userName" required>
+          <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="submitted && (userForm.username.$error.minlength||userForm.username.$error.maxlength || userForm.username.$invalid)" id="error-icon"></span>
+            <p ng-show="submitted && userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+            <p ng-show="submitted && userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+            <p ng-show="submitted && userForm.username.$invalid && !userForm.username.$error.minlength && !userForm.username.$error.maxlength" class="help-block" >Username is required</p>
+        </div>
+        
+        <!-- EMAIL -->
+        <div class="form-group" ng-class="{ 'has-error has-feedback' : submitted && userForm.email.$invalid}">
+            <label class="control-label text-info">Email</label>
+            <input type="email" name="email" class="form-control" ng-model="email" />
+            <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="submitted && userForm.email.$invalid"></span>
+            <p ng-show="submitted && userForm.email.$invalid" class="help-block text-danger">Enter a valid email.</p>
+        </div>
+        
+		<!--Message -->
+		<div class = "form-group">
+			<label class = "control-label"></label>
+		</div>
+        
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div><!-- col-sm-8 -->
+
+
+</div>

@@ -1,0 +1,38 @@
+<div class = "tTable">
+    <div class = "row header">
+        <!--<tr>-->
+        <div class = "headerPadding border col-md-3 text-center"><b>Art</b></div>
+        <div class = "headerPadding border col-md-3 text-center"><b>Science</b></div>
+        <div class = "headerPadding border col-md-3 text-center"><b>Sports</b></div>
+        <div class = "headerPadding border col-md-3 text-center"><b>Literature</b></div>
+        <!--</tr>-->
+    </div>
+    <div class = "col-md-3">
+        <div ng-repeat = "book in artShelf" class = "row">
+            <div ng-click = "checkIt($event)" id = "{{book.name}}" class = "{{book.out}} firstColumn regularPadding border text-center">
+                {{book.name}}
+            </div>
+        </div>
+    </div>
+    <div class = "col-md-3">
+        <div  ng-repeat = "book in scienceShelf" class = "row">
+            <div ng-click = "checkIt($event)" id = "{{book.name}}" class = "{{book.out}} secondColumn regularPadding border text-center">
+                {{book.name}}
+            </div>
+        </div>
+    </div>
+    <div class = "col-md-3">
+        <div  ng-repeat = "book in sportsShelf" class = "row">
+            <div ng-click = "checkIt($event)" id = "{{book.name}}" class = "{{book.out}} thirdColumn regularPadding border text-center">
+                {{book.name}}
+            </div>
+        </div>
+    </div>
+    <div class = "col-md-3">
+        <div  ng-repeat = "book in literatureShelf" class = "row">
+            <div ng-click = "checkIt($event)" id = "{{book.name}}" class = "{{book.out}} fourthColumn regularPadding border text-center">
+                {{book.name}}
+            </div>
+        </div>
+    </div>
+</div>

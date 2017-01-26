@@ -1,0 +1,107 @@
+ommit da588718e3c00bca3c87032366f496e489da5854
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 20:42:06 2016 -0500
+
+    I just finished the assignment, right in time also. I finsihed implementing the loadSave method, I was having an error because I wasn't storing the rock hardness on each load, so when I tried to load and save, it messed a lot up.
+
+commit 410a3178addab961567efd72c2ac8ca1f702d93b
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 19:45:43 2016 -0500
+
+    I made a lot of changes, got the load and save methods to work. I'm working on getting them to work simultaneously. One thing I realized is when you call load and save, it could involve saving a dungeon with more rooms than I permit in my code. For instance if the dungeon had ike 100 rooms my load save calls together would fail. I decided to create a separate method called loadSave().
+
+commit eeba4d4492604f2fc55654abf49e16a0a41f49d5
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 13:49:59 2016 -0500
+
+     I took my old code, implemented hardness, and included it in my new Assignment 1_02 project. Unfortunately I'm still new to C, so this assignment code might look messy, but I'm planning to implement headers in the next assignment.
+
+commit b303b2c59e400cba10674f615f2777362b0de739
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Tue Sep 13 18:30:54 2016 -0500
+
+    I basically finished the loadDungeon method, and made it print to the console. There is one problem, right now my dungeon is just a 2D array of char, but I need to change it so it will be a 2D array of room structures(I think). I made a lot of progress today though, might keep working on it.
+
+commit 592291895ff7f1322ff861d4f3144522be4ae22d
+Merge: 150c8d4 bd52a1d
+Author: Student <student@coms327-vm.cs.iastate.edu>
+student@coms327-vm:~/Downloads/School/Com327/Holmes_Ben.assignment-1.02$ 
+student@coms327-vm:~/Downloads/School/Com327/Holmes_Ben.assignment-1.02$ git log --since=1.week
+commit da588718e3c00bca3c87032366f496e489da5854
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 20:42:06 2016 -0500
+
+    I just finished the assignment, right in time also. I finsihed implementing the loadSave method, I was having an error because I wasn't storing the rock hardness on each load, so when I tried to load and save, it messed a lot up.
+
+commit 410a3178addab961567efd72c2ac8ca1f702d93b
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 19:45:43 2016 -0500
+
+    I made a lot of changes, got the load and save methods to work. I'm working on getting them to work simultaneously. One thing I realized is when you call load and save, it could involve saving a dungeon with more rooms than I permit in my code. For instance if the dungeon had ike 100 rooms my load save calls together would fail. I decided to create a separate method called loadSave().
+
+commit eeba4d4492604f2fc55654abf49e16a0a41f49d5
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 13:49:59 2016 -0500
+
+     I took my old code, implemented hardness, and included it in my new Assignment 1_02 project. Unfortunately I'm still new to C, so this assignment code might look messy, but I'm planning to implement headers in the next assignment.
+
+commit b303b2c59e400cba10674f615f2777362b0de739
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Tue Sep 13 18:30:54 2016 -0500
+
+    I basically finished the loadDungeon method, and made it print to the console. There is one problem, right now my dungeon is just a 2D array of char, but I need to change it so it will be a 2D array of room structures(I think). I made a lot of progress today though, might keep working on it.
+
+commit 592291895ff7f1322ff861d4f3144522be4ae22d
+Merge: 150c8d4 bd52a1d
+Author: Student <student@coms327-vm.cs.iastate.edu>
+student@coms327-vm:~/Downloads/School/Com327/Holmes_Ben.assignment-1.02$ 
+student@coms327-vm:~/Downloads/School/Com327/Holmes_Ben.assignment-1.02$ git log --since=2.weeks
+commit da588718e3c00bca3c87032366f496e489da5854
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 20:42:06 2016 -0500
+
+    I just finished the assignment, right in time also. I finsihed implementing the loadSave method, I was having an error because I wasn't storing the rock hardness on each load, so when I tried to load and save, it messed a lot up.
+
+commit 410a3178addab961567efd72c2ac8ca1f702d93b
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 19:45:43 2016 -0500
+
+    I made a lot of changes, got the load and save methods to work. I'm working on getting them to work simultaneously. One thing I realized is when you call load and save, it could involve saving a dungeon with more rooms than I permit in my code. For instance if the dungeon had ike 100 rooms my load save calls together would fail. I decided to create a separate method called loadSave().
+
+commit eeba4d4492604f2fc55654abf49e16a0a41f49d5
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 13:49:59 2016 -0500
+
+     I took my old code, implemented hardness, and included it in my new Assignment 1_02 project. Unfortunately I'm still new to C, so this assignment code might look messy, but I'm planning to implement headers in the next assignment.
+
+commit b303b2c59e400cba10674f615f2777362b0de739
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Tue Sep 13 18:30:54 2016 -0500
+
+    I basically finished the loadDungeon method, and made it print to the console. There is one problem, right now my dungeon is just a 2D array of char, but I need to change it so it will be a 2D array of room structures(I think). I made a lot of progress today though, might keep working on it.
+
+c
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 20:42:06 2016 -0500
+
+    I just finished the assignment, right in time also. I finsihed implementing the loadSave method, I was having an error because I wasn't storing the rock hardness on each load, so when I tried to load and save, it messed a lot up.
+
+commit 410a3178addab961567efd72c2ac8ca1f702d93b
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 19:45:43 2016 -0500
+
+    I made a lot of changes, got the load and save methods to work. I'm working on getting them to work simultaneously. One thing I realized is when you call load and save, it could involve saving a dungeon with more rooms than I permit in my code. For instance if the dungeon had ike 100 rooms my load save calls together would fail. I decided to create a separate method called loadSave().
+
+commit eeba4d4492604f2fc55654abf49e16a0a41f49d5
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Wed Sep 14 13:49:59 2016 -0500
+
+     I took my old code, implemented hardness, and included it in my new Assignment 1_02 project. Unfortunately I'm still new to C, so this assignment code might look messy, but I'm planning to implement headers in the next assignment.
+
+commit b303b2c59e400cba10674f615f2777362b0de739
+Author: Student <student@coms327-vm.cs.iastate.edu>
+Date:   Tue Sep 13 18:30:54 2016 -0500
+
+    I basically finished the loadDungeon method, and made it print to the console. There is one problem, right now my dungeon is just a 2D array of char, but I need to change it so it will be a 2D array of room structures(I think). I made a lot of progress today though, might keep working on it.
+
+c

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validation Form</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src = "/Users/btholmes/Documents/workspace/Lab2319/src/Lab2/validation.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+<style>
+.ml {
+	margin-left: 10px; 
+}
+.mt{
+	margin-top: 20px; 
+}
+
+.rightFirstName{
+	display: none; 
+}
+.wrongFirstName{
+	display: none; 
+}
+.rightLastName {
+	display: none; 
+}
+.wrongLastName{
+	display: none; 
+}
+.rightGender{
+	display: none; 
+}
+.wrongGender{
+	display: none; 
+}
+.rightState {
+	display: none; 
+}
+.wrongState{
+	display: none; 
+}
+img{
+	width: 2em; 
+	height: 2em; 
+}
+
+.show {
+	display: inline; 
+	float: right; 
+}
+</style>
+
+</head>
+<body>
+<h1 class = "text-primary">Validation Form</h1>
+<form>
+<div class = "ml row">
+	<div class = "col-md-2">
+		First Name: 
+			<input type = "textfield" id = "firstName" required>
+			<img class = "rightFirstName" src = "/Users/btholmes/Documents/workspace/Lab2319/src/correct.png">
+			<img class = "wrongFirstName" src = "/Users/btholmes/Documents/workspace/Lab2319/src/wrong.png">
+	</div>
+	<div class = "col-md-10"></div>
+</div>
+<div class = "ml row">
+	<div class = "col-md-2">
+		Last Name: 
+		<input type = "textfield" id = "lastName" required>
+		<img class = "rightLastName" src = "/Users/btholmes/Documents/workspace/Lab2319/src/correct.png">
+		<img class = "wrongLastName" src = "/Users/btholmes/Documents/workspace/Lab2319/src/wrong.png">
+	</div>
+	<div class = "col-md-10"></div>
+</div>
+<br>
+<div class = "ml row">
+	<div class = "col-md-2">
+		<select name="gender" id="gender">
+		<option select disabled selected>--Gender--</option>
+    	<option value="1">Male</option>
+    	<option value="2">Female</option>
+    
+		</select>
+		<img class = "rightGender" src = "/Users/btholmes/Documents/workspace/Lab2319/src/correct.png">
+		<img class = "wrongGender" src = "/Users/btholmes/Documents/workspace/Lab2319/src/wrong.png">
+	</div>
+</div>
+
+<div class = "mt ml row">
+	<div class = "col-md-2">
+		<select name="state" id="state">
+		<option selected disabled>--State--</option>
+		    <option value="1">California</option>
+		    <option value="2">Florida</option>
+		    <option value="3">New York</option>
+		    <option value="4">Texas</option>
+		    <option value="5">Hawaii</option>
+		    <option value="6">Washington</option>
+		    <option value="7">Colorado</option>
+		    <option value="8">Virginia</option>
+		    <option value="9">Iowa</option>
+		    <option value="10">Arizona</option>
+	    </select>
+	    <img class = "rightState" src = "/Users/btholmes/Documents/workspace/Lab2319/src/correct.png">
+		<img class = "wrongState" src = "/Users/btholmes/Documents/workspace/Lab2319/src/wrong.png">
+	 </div>
+</div>
+	
+<div class = "row mt ml">
+	<div class = "col-md-1">
+	 <button onclick = "checkValues()" type = "button" class = "btn btn-primary" >Continue</button>
+	</div>
+</div>
+
+</form>
+
+
+
+</body>
+</html>

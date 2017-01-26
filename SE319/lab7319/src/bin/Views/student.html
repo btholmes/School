@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	    
+    <!-- Angular JS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+    <script src="../Controllers/studentController.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel = "stylesheet" href = "../style.css">
+</head>
+<body>
+
+<!-- Generates the library shelves -->
+<h1>Library Shelves</h1>
+<div ng-app="student" ng-controller="studentController">
+<table>
+	<th> <h3>Shelf Literature</h3></th> 
+	<th><h3>Shelf Science</h3></th>
+	<th><h3>Shelf Sport</h3></th>
+	<th><h3>Shelf Art</h3></th>
+	<tr ng-repeat="shelf in shelvesObj">
+		<td ng-repeat="(key, val) in shelf"> {{val}}</td>
+	</tr> 
+</table>
+<hr>
+</div>
+
+<p>Return or Checkout books by clicking on the cell.</p>
+
+</body>
+</html>

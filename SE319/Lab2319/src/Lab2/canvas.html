@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas Page</title>
+
+<script src = "/Users/btholmes/Documents/workspace/Lab2319/src/Lab2/canvasCtrl.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+<br>
+<div id = "container">
+<div class = "row"> 
+	<div class = "text-center">
+		 <button onclick = "toggleButton()" id = "start" class = "btn btn-danger">Start</button> 
+		 <button onclick = "turnLeft()" class = "btn btn-danger">Left</button> 
+		 <button onclick = "turnRight()" class = "btn btn-danger">Right</button>
+	</div>
+</div>
+<br>
+<div class = "row"> 
+	<div class = "text-center">
+		  <canvas id="myCanvas" width="700" height="500" style="border:1px solid #d3d3d3;"></canvas>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<ion-view view-title="Cities Menu" class = "cities_page" >
+    <ion-slides options = "vm.options" class="slides">
+        <h4 class = "text-primary text-center"><b>Slide Up Or Down Once Images Load</b></h4>
+        <ion-slide-page class="box" ng-repeat="item in vm.slides track by $index">
+            <ion-content>
+                <img class = "slide_image" ng-src="./php/{{ item.url }}">
+            </ion-content>
+            <div class = "infoAboutImage row">
+                <div class = "col-md-5 white"><b>{{item.user}} : </b> </div>
+                <div class = "col-md-7 white"><b>{{item.date}}</b></div>
+            </div>
+            <div class = "row">
+                <div class = "col-md-5 white"><b>{{item.city}} :</b> </div>
+                <div class = "col-md-7 white"><b>{{item.description}}</b></div>
+            </div>
+
+        </ion-slide-page>
+    </ion-slides>
+
+</ion-view>

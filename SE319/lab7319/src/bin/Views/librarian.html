@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	    
+    <!-- Angular JS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+    <script src="../Controllers/librarianController.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel = "stylesheet" href = "../style.css">
+</head>
+<body>
+
+<!-- Generates the library shelves -->
+<h1>Library Shelves</h1>
+<div ng-app="library" ng-controller="librarianController" ng-init="fetchShelves()">
+<table>
+	<th> <h3>Shelf Literature</h3></th> 
+	<th><h3>Shelf Science</h3></th>
+	<th><h3>Shelf Sport</h3></th>
+	<th><h3>Shelf Art</h3></th>
+	<tr ng-repeat="shelf in shelvesObj">
+		<td ng-repeat="(key, val) in shelf"> {{val}}</td>
+	</tr> 
+</table>
+<hr>
+</div>
+
+<div class="form-group">
+	Add a book:
+	<input type="text" name="book" class="form-control" value="Book title">
+	Select shelf
+	<select name="shelf">
+		<option value="lit">Literature</option>
+  		<option value="sci">Science</option>
+  		<option value="sport">Sport</option>
+  		<option value="art">Art</option>
+	</select>
+	<br>
+	Check if this is a Reference Book
+	<input type="checkbox" name="isReference">
+	<br>
+	<input type="button" name="btn_add" value="Add Book">
+</div>
+
+
+</body>
+</html>

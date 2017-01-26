@@ -1,0 +1,67 @@
+.login {	
+	width: 25%; 
+	height: 25%; 	
+	position: absolute; 
+	left: 36%; 
+	top: 28%; 
+}
+.loginBtn {
+	width: 100%; 
+}
+
+#userWelcome {
+	margin-left: 50px; 
+}
+
+.note {
+	
+	margin-left: 50px; 	
+}
+
+.tTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: 13%; 
+}
+
+.header{
+	text-align: center;  
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+}
+td:hover{
+	cursor: pointer; 
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.checkedOut { 
+
+	background-color: red; 
+	color: white; 
+}
+
+.bookName{
+	margin-left: 50px; 
+}
+
+.addBookBtn{
+	margin-top: 19.5px; 
+}
+
+.hidden {
+	display: none;
+}
+
+.reveal {
+	display: inline-block; 
+	color: red; 
+}

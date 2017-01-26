@@ -1,0 +1,202 @@
+.signup{
+
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    left: 35%;
+    top: 10%;
+}
+
+.float-right{
+    float:right;
+}
+
+.alignTitle{
+    text-align: center;
+}
+.message:hover{
+    cursor: pointer;
+}
+
+.ml5{
+    margin-left: 5px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.topRight{
+    position: absolute;
+    top: 120px;
+    right: 10px;
+}
+
+.sendMessage{
+
+    width: 30%;
+    height: 30%;
+    left: 25%;
+    top: 25%;
+}
+.submitBtn{
+    width: 100%;
+}
+.signUpBtn{
+    width: 100%;
+    margin-top: 10px;
+}
+.addBookBtn{
+    margin-bottom: 19.5px;
+}
+
+.hide{
+    display: none;
+}
+
+
+.login {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    left: 36%;
+    top: 28%;
+}
+.loginBtn {
+    width: 100%;
+}
+
+#userWelcome {
+    float: right;
+    margin-right: 100px;
+}
+
+.logOutBtn{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.logOutBtnL{
+    margin-left: 50px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+
+.note {
+
+    margin-left: 50px;
+
+}
+
+.bookInfoDetails{
+
+    float: left;
+    margin-left: 3.5%;
+    /*margin-top: 280px;*/
+    width: 30%;
+
+
+}
+.bookInfo{
+    border: 1px solid #c2cbc8;
+    margin-bottom: 5%;
+}
+
+.bookDetails{
+
+    float: left;
+    margin-left: 3.5%;
+    width: 30%;
+    border: 1px solid #c2cbc8;
+}
+
+.bookInfoTitle{
+    margin-top: 10px;
+}
+.borrowInfoTitle{
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.borrowTable{
+    width: 100%;
+}
+.borrowTitle{
+    padding-left: 130px;
+    border-top:  1px solid #c2cbc8;
+    border-left:  1px solid #c2cbc8;
+    border-right:  1px solid #c2cbc8;
+}
+
+.checkOutButton{
+    float: right;
+    margin: 5px;
+}
+
+.checkOutButton:hover{
+    cursor:pointer;
+}
+
+.border-right{
+    border-right:  1px solid #c2cbc8;
+}
+
+.border-bottom{
+    border-bottom:  1px solid #c2cbc8;
+}
+
+.tTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-right: 13%;
+    float: right;
+}
+
+.header{
+    text-align: center;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+
+}
+td:hover{
+    cursor: pointer;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.checkedOut {
+
+    background-color: red;
+    color: white;
+}
+
+.bookName{
+    margin-left: 50px;
+}
+
+.addBookBtn{
+    margin-top: 9px;
+}
+.deleteBtn{
+    float: right;
+    margin: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.reveal {
+    display: inline-block;
+    color: red;
+}
+.hoverMe:hover{
+    opacity: 0.5;
+}
+

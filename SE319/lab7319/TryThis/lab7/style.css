@@ -1,0 +1,100 @@
+.login {	
+	width: 25%; 
+	height: 25%; 	
+	position: absolute; 
+	left: 36%; 
+	top: 28%; 
+}
+.loginBtn {
+	width: 100%; 
+}
+
+#userWelcome {
+	margin-left: 50px; 
+}
+.ml50{
+	margin-left: 50px;
+}
+.mt24{
+	margin-top: 16px;
+}
+.mt-5{
+	margin-top: -5px;
+}
+.note {
+	
+	margin-left: 50px; 	
+}
+
+.tTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: 13%;
+}
+.headerPadding{
+	padding: 10px;
+}
+.regularPadding{
+	padding: 5px;
+	cursor: pointer;
+
+}
+.firstColumn{
+	margin-right: 6px;
+	margin-left: -15px;
+}
+.secondColumn {
+	margin-left: -6px;
+}
+.thirdColumn{
+	margin-right: -7px;
+}
+.fourthColumn{
+	margin-left: 7px;
+	margin-right: -15px;
+}
+
+.border{
+	border: 1px solid black;
+}
+.header{
+	text-align: center;  
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+}
+td:hover{
+	cursor: pointer; 
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.checkedOut {
+
+	background-color: red; 
+	color: white; 
+}
+
+.bookName{
+	margin-left: 50px; 
+}
+
+.addBookBtn{
+	margin-top: 16px;
+}
+
+.hidden {
+	display: none;
+}
+
+.reveal {
+	display: inline-block; 
+	color: red; 
+}

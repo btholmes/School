@@ -1,0 +1,57 @@
+table {
+	border: 1px solid black;
+}
+
+th {
+	border: 1px solid black;
+}
+
+td{
+	border: 1px solid black;
+}
+
+.signup{
+
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    left: 35%;
+    top: 10%;
+}
+
+.float-right{
+    float:right;
+}
+
+.alignTitle{
+    text-align: center;
+}
+.message:hover{
+    cursor: pointer;
+}
+
+.ml5{
+    margin-left: 5px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.topRight{
+    position: absolute;
+    top: 120px;
+    right: 10px;
+}
+
+.sendMessage{
+
+    width: 30%;
+    height: 30%;
+    left: 25%;
+    top: 25%;
+}
+.submitBtn{
+    width: 100%;
+}
+.hide{
+    display: none;
+}

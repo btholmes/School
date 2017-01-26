@@ -1,0 +1,1 @@
+This is the pre assignment made for COM 327. This assignment will not be a part of the game being developed for future assignments, but instead is an implementation of Langton's Ant. Relevant files include langton327.c and langton.mpg which plays the video file.  

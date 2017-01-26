@@ -1,0 +1,1 @@
+This is Assignment 1.01 which fully creates a Dungeon room using '.', rock using ' ' and corridors using '#'. My dungeon first randomly places all the rooms, then connects them with the shortest path. To ensure all dungeons are connected, after the shortest path is established, I also connect room 1 with 2, 2 with 3, etc. So there are multiple ways to get to each room. 
