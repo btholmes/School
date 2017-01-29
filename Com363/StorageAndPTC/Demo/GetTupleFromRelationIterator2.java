@@ -4,97 +4,93 @@ import PTCFramework.ProducerIterator;
 import StorageManager.Storage;
 
 public class GetTupleFromRelationIterator2 implements ProducerIterator<byte[]> {
-    int currentPage = 0;
-    int nextpage = -1;
-    int tuplelength;
-    int tuplesRead = 0;
-    int maxTuples;
-    byte[] currentBuffer;
-    String fileName;
-    int pageSize;
+    private final int BUFFER_BYTE_ARRAY_SIZE = 1024;
+    private int currentPage = 0;
+    private int nextpage = -1;
+    private int dataEntryLength;
+    private int dataEntriesRead = 0;
+    private int maxDataEntries;
+    private byte[] currentBuffer;
+    private String fileName;
+    private int pageSize;
+    private Storage storage;
 
-    Storage storage;
-
-
-    public GetTupleFromRelationIterator2(String fName, int tupleSize, int pSize) throws Exception {
-        this.fileName = fName;
-        this.tuplelength = tupleSize;
-        this.storage = new Storage();
-        this.storage.LoadStorage(fName);
-        this.pageSize = this.storage.pageSize;
-        this.currentPage = pSize;
+    public GetTupleFromRelationIterator2(String fName, int dataEntrySize, int pSize) throws Exception {
+        storage = new Storage();
+        fileName = fName;
+        dataEntryLength = dataEntrySize;
+        storage.LoadStorage(fName);
+        pageSize = storage.pageSize;
+        currentPage = pSize;
     }
 
     public boolean hasNext() {
-
         boolean next = false;
-        if(this.nextpage != -1 || this.tuplesRead != this.maxTuples){
+        if(nextpage != -1 || dataEntriesRead != maxDataEntries){
             next = true;
         }
         return next;
     }
 
-    private int toInt(byte[] var1, int var2) {
-        int var3 = 0;
+    //Taken from print relation 1
+    private int toInt(byte[] buffer, int offset) {
+        int ret = 0;
 
-        for(int var4 = 0; var4 < 4; var4++) {
-            var3 <<= 8;
-            var3 |= var1[var2 + var4] & 255;
+        for(int i = 0; i < 4; i++) {
+            ret <<= 8;
+            ret |= buffer[offset + i] & 255;
         }
 
-        return var3;
+        return ret;
     }
 
     public byte[] next() {
-        byte[] byteArray;
-
-        int i;
-        if(this.tuplesRead == this.maxTuples) {
-            if(this.nextpage == 0) {
-                return null;
-            } else {
-                this.currentBuffer = new byte[this.pageSize];
+        if(dataEntriesRead == maxDataEntries) {
+            if(nextpage != 0) {
+                currentBuffer = new byte[pageSize];
 
                 try {
-                    this.storage.ReadPage((long)this.nextpage, this.currentBuffer);
-                    this.currentPage = this.nextpage;
-                    this.nextpage = this.toInt(this.currentBuffer, 4);
-                    this.maxTuples = this.toInt(this.currentBuffer, 0);
-                    this.tuplesRead = 0;
-                    byteArray = new byte[this.tuplelength];
+                    storage.ReadPage((long)nextpage, currentBuffer);
+                    currentPage = nextpage;
+                    nextpage = toInt(currentBuffer, 4);
+                    maxDataEntries = toInt(currentBuffer, 0);
+                    dataEntriesRead = 0;
+                    byte[] byteArray = new byte[dataEntryLength];
 
-                    for(i = 0; i < this.tuplelength; i++) {
-                        byteArray[i] = this.currentBuffer[8 + this.tuplelength * this.tuplesRead + i];
+                    for(int i = 0; i < dataEntryLength; i++) {
+                        byteArray[i] = currentBuffer[8 + dataEntryLength * dataEntriesRead + i];
                     }
 
-                    ++this.tuplesRead;
+                    ++dataEntriesRead;
                     return (new String(byteArray)).getBytes();
-                } catch (Exception var3) {
-                    var3.printStackTrace();
+                }
+                catch (Exception e) {
                     return null;
                 }
             }
         } else {
-            byteArray = new byte[this.tuplelength];
+            byte[] byteArray = new byte[dataEntryLength];
 
-            for(i = 0; i < this.tuplelength; i++) {
-                byteArray[i] = this.currentBuffer[8 + this.tuplelength * this.tuplesRead + i];
+            for(int i = 0; i < dataEntryLength; i++) {
+                byteArray[i] = currentBuffer[8 + dataEntryLength * dataEntriesRead + i];
             }
 
-            ++this.tuplesRead;
+            ++dataEntriesRead;
             return (new String(byteArray)).getBytes();
         }
+
+        return null;
     }
 
     public void remove() {
     }
 
     public void open() throws Exception {
-        this.currentBuffer = new byte[1024];
-        this.storage.ReadPage((long)this.currentPage, this.currentBuffer);
-        this.nextpage = this.toInt(this.currentBuffer, 4);
-        this.maxTuples = this.toInt(this.currentBuffer, 0);
-        this.tuplesRead = 0;
+        currentBuffer = new byte[BUFFER_BYTE_ARRAY_SIZE];
+        storage.ReadPage((long)currentPage, currentBuffer);
+        nextpage = toInt(currentBuffer, 4);
+        maxDataEntries = toInt(currentBuffer, 0);
+        dataEntriesRead = 0;
     }
 
     public void close() throws Exception {

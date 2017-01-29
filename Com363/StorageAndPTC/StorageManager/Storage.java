@@ -23,7 +23,6 @@ public class Storage{
 
 		if(this.bitMapSize%16!=0){
 			this.bitMapSize = (this.bitMapSize/16+1)*16;
-			System.out.println(this.bitMapSize);
 		}
 		//Allocating 16 extra bytes in the beginning for storage of parameters such as pagesize.
 		this.bitMapSize=this.bitMapSize+16;
@@ -68,6 +67,10 @@ public class Storage{
 		
 		
 		this.bitMapSize =(int) Math.ceil(this.numPages/8.0);
+
+		if(this.bitMapSize%16!=0){
+			this.bitMapSize = (this.bitMapSize/16+1)*16;
+		}
 		this.bitMapSize=this.bitMapSize+16;
 		
 		

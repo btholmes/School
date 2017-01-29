@@ -12,7 +12,6 @@ public class PrintRelation3{
                 System.out.println(new String(toInt(tuple, 0)+", "+new String(tuple).substring(4, 27)+", "+ toInt(tuple, 31)));
             }else {
                 System.out.println(new String(toInt(tuple, 0)+", "+new String(tuple).substring(4, 27)+", "+ new String(tuple).substring(27,31)+", "+ toInt(tuple, 31)));
-
             }
         }
     }
