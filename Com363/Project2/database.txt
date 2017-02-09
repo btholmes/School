@@ -1,0 +1,9 @@
+Here is your COMS 363 MySQL login information.
+
+MySQL Server: mysql.cs.iastate.edu
+DB : db363houseant
+Username : dbu363houseant
+Password : 6sEAaMQk
+
+If you have issue or question, please feel to contact SSG. Please remember to REMOVE your password, when you send any email to us.
+The Computer Science System Support Group
