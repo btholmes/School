@@ -11,6 +11,7 @@
         // vm.login = login;
         // vm.userLogin;
         // vm.userPass;
+        alert("in login");
 
         $scope.login = function(){
 
