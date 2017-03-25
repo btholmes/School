@@ -1,4 +1,0 @@
- Holmes_Ben.assignment-1.10: Holmes_Ben.assignment-1.10.cpp
-	g++ -o Holmes_Ben.assignment-1.10 Holmes_Ben.assignment-1.10.cpp -lncurses
-clean:
-	rm -f Holmes_Ben.assignment-1.10

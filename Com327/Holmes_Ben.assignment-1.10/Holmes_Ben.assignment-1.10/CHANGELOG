@@ -1,9 +1,0 @@
-Mon November 21, 
-	Spent a lot of time deciding on a game. Finally decided on building a memory game. Today I basically just got the outline of the game to display, all the cards, the help box, etc. I haven’t actually implemented any functionality. 
-
-Wednesday November 23, 
-	Today I created the Card class, and use it to store all the information about the cards. I then create an instance of that class 40 times, one for each card. I add them to an array, and then I cycle through that array, and print out all the cards. It is random, so that way it prevents two identical cards from being right next to each other. 
-
-
-Friday November 25, 
-	I finished the project, I had a few bugs in my checkMatch() function, which I finally got to work, after that it was done. All seems to be going well. 
